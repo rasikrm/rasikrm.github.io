@@ -351,20 +351,92 @@ body {
         margin-right: 0;
         margin-bottom: 15px;
     }
+/* ===== VALENTINE'S DAY MESSAGE STYLES ===== */
 
-    .valentine-final {
+/* Big pink header message */
+.valentine-message {
     text-align: center;
-    margin: 40px 0;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    border: 3px dashed #ff69b4;
+    margin: 20px 0 30px 0;
 }
 
-.valentine-final p:first-child {
-    font-size: 44px;
-    color: #ff1493; /* Deep pink */
+.valentine-message p {
+    font-size: 48px;
+    color: #ff69b4; /* Hot pink */
     font-weight: bold;
-    margin-bottom: 15px;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    animation: heartbeat 1.5s infinite;
+}
+
+.valentine-message .sub-message {
+    font-size: 28px;
+    color: #ff1493; /* Deep pink */
+    font-style: italic;
+    margin-top: 5px;
+    animation: pulse 2s infinite;
+}
+
+/* Final Valentine's message at bottom */
+.final-valentine {
+    background: linear-gradient(45deg, #ffafbd, #ffc3a0);
+    padding: 40px;
+    border-radius: 25px;
+    margin: 50px auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(255,105,180,0.3);
+    border: 5px solid white;
+}
+
+.big-pink {
+    font-size: 44px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.romantic-text {
+    font-size: 24px;
+    color: #fff;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Animations */
+@keyframes heartbeat {
+    0%, 100% { 
+        transform: scale(1); 
+        color: #ff69b4;
+    }
+    50% { 
+        transform: scale(1.05); 
+        color: #ff1493;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% { 
+        opacity: 0.8;
+        transform: translateY(-5px);
+    }
+}
+
+/* Make header text more romantic */
+.header h1 {
+    font-size: 3em;
+    color: #d32f2f;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.header p {
+    font-size: 1.3em;
+    color: #666;
+    line-height: 1.6;
 }
 }
