@@ -1,8 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-    <h1>🎉 IT WORKS! 🎉</h1>
-    <p>Your Valentine's site is ready to be built!</p>
-    <p><a href="test/">Click here to see your test folder</a></p>
+    <div class="container">
+        <!-- Header with hearts -->
+        <div class="header">
+            <h1><i class="fas fa-heart"></i> Our Beautiful Memories <i class="fas fa-heart"></i></h1>
+            <p>Scroll through our journey together...</p>
+        </div>
+
+        <!-- Photo Gallery Grid -->
+        <div class="gallery">
+            <!-- Replace these with your actual images -->
+            <div class="photo"><img src="images/photo1.jpg" alt="Our memory 1"></div>
+            <div class="photo"><img src="images/photo2.jpg" alt="Our memory 2"></div>
+            <div class="photo"><img src="images/photo3.jpg" alt="Our memory 3"></div>
+            <div class="photo"><img src="images/photo4.jpg" alt="Our memory 4"></div>
+            <div class="photo"><img src="images/photo5.jpg" alt="Our memory 5"></div>
+            <div class="photo"><img src="images/photo6.jpg" alt="Our memory 6"></div>
+            <div class="photo"><img src="images/photo7.jpg" alt="Our memory 7"></div>
+            <div class="photo"><img src="images/photo8.jpg" alt="Our memory 8"></div>
+            <div class="photo"><img src="images/photo9.jpg" alt="Our memory 9"></div>
+            <div class="photo"><img src="images/photo10.jpg" alt="Our memory 10"></div>
+        </div>
+
+        <!-- The Big Question -->
+        <div class="question-box">
+            <div class="hearts-floating">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+            
+            <h2>After all these beautiful moments...</h2>
+            <h1 class="big-question">Will you be my Valentine? 💝</h1>
+            <p class="subtext">I promise it'll be as amazing as our time together!</p>
+
+            <!-- The Buttons -->
+            <div class="buttons">
+                <!-- YES Button (Works normally) -->
+                <a href="plan.html" class="btn yes-btn">
+                    <i class="fas fa-heart"></i> YES! Absolutely!
+                </a>
+                
+                <!-- NO Button (Tricky one) -->
+                <button class="btn no-btn" id="trickyNo">
+                    <i class="fas fa-times"></i> No, sorry...
+                </button>
+            </div>
+
+            <p class="hint"><i class="fas fa-smile-wink"></i> Hint: The "Yes" button is looking really friendly today!</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Made with <i class="fas fa-heart" style="color:red;"></i> for the most amazing person</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
