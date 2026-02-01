@@ -17,6 +17,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center everything in container */
 }
 
 /* Page 1 Styles */
@@ -24,6 +27,7 @@ body {
     text-align: center;
     padding: 30px 20px;
     color: #d32f2f;
+    width: 100%;
 }
 
 .header h1 {
@@ -37,6 +41,68 @@ body {
     color: #666;
 }
 
+/* ===== VALENTINE'S DAY MESSAGE STYLES ===== */
+
+/* Big pink header message */
+.valentine-message {
+    text-align: center;
+    margin: 20px 0 30px 0;
+    width: 100%;
+}
+
+.valentine-message p {
+    font-size: 48px;
+    color: #ff69b4; /* Hot pink */
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    animation: heartbeat 1.5s infinite;
+}
+
+.valentine-message .sub-message {
+    font-size: 28px;
+    color: #ff1493; /* Deep pink */
+    font-style: italic;
+    margin-top: 5px;
+    animation: pulse 2s infinite;
+}
+
+/* Final Valentine's message at bottom - CENTERED */
+.final-valentine {
+    background: linear-gradient(45deg, #ffafbd, #ffc3a0);
+    padding: 40px;
+    border-radius: 25px;
+    margin: 50px auto;  /* Auto margins center horizontally */
+    max-width: 800px;
+    width: 90%; /* Makes it responsive */
+    text-align: center; /* Centers text inside */
+    box-shadow: 0 15px 35px rgba(255,105,180,0.3);
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-pink {
+    font-size: 44px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    width: 100%;
+    text-align: center;
+}
+
+.romantic-text {
+    font-size: 24px;
+    color: #fff;
+    font-style: italic;
+    opacity: 0.9;
+    width: 100%;
+    text-align: center;
+}
+
 /* Gallery Grid */
 .gallery {
     display: grid;
@@ -47,6 +113,7 @@ body {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
 }
 
 .photo {
@@ -74,8 +141,9 @@ body {
     background: white;
     padding: 40px;
     border-radius: 25px;
-    margin: 50px auto;
+    margin: 50px auto; /* Auto centers it */
     max-width: 800px;
+    width: 90%;
     text-align: center;
     position: relative;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
@@ -156,14 +224,16 @@ body {
     margin-top: 20px;
     color: #ff4081;
     font-style: italic;
+    text-align: center;
 }
 
-/* Footer */
+/* Footer - ALSO CENTERED */
 .footer {
     text-align: center;
     padding: 20px;
     color: #666;
     margin-top: 40px;
+    width: 100%;
 }
 
 /* Page 2 Styles */
@@ -294,6 +364,17 @@ body {
     50% { transform: translateY(-10px); }
 }
 
+@keyframes heartbeat {
+    0%, 100% { 
+        transform: scale(1); 
+        color: #ff69b4;
+    }
+    50% { 
+        transform: scale(1.05); 
+        color: #ff1493;
+    }
+}
+
 .confetti {
     position: fixed;
     width: 15px;
@@ -351,96 +432,17 @@ body {
         margin-right: 0;
         margin-bottom: 15px;
     }
-/* ===== VALENTINE'S DAY MESSAGE STYLES ===== */
-
-/* Big pink header message */
-.valentine-message {
-    text-align: center;
-    margin: 20px 0 30px 0;
-}
-
-.valentine-message p {
-    font-size: 48px;
-    color: #ff69b4; /* Hot pink */
-    font-weight: bold;
-    margin: 10px 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    animation: heartbeat 1.5s infinite;
-}
-
-.valentine-message .sub-message {
-    font-size: 28px;
-    color: #ff1493; /* Deep pink */
-    font-style: italic;
-    margin-top: 5px;
-    animation: pulse 2s infinite;
-}
-
-/* Final Valentine's message at bottom */
-.final-valentine {
-    background: linear-gradient(45deg, #ffafbd, #ffc3a0);
-    padding: 40px;
-    border-radius: 25px;
-    margin: 50px auto;  /* This centers it horizontally */
-    max-width: 800px;
-    text-align: center; /* This centers text inside */
-    box-shadow: 0 15px 35px rgba(255,105,180,0.3);
-    border: 5px solid white;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Extra centering */
-    justify-content: center;
-}
-
-.big-pink {
-    font-size: 44px;
-    color: white;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.romantic-text {
-    font-size: 24px;
-    color: #fff;
-    font-style: italic;
-    opacity: 0.9;
-}
-
-/* Animations */
-@keyframes heartbeat {
-    0%, 100% { 
-        transform: scale(1); 
-        color: #ff69b4;
+    
+    /* Responsive text sizes */
+    .valentine-message p {
+        font-size: 36px;
     }
-    50% { 
-        transform: scale(1.05); 
-        color: #ff1493;
+    
+    .big-pink {
+        font-size: 32px;
     }
-}
-
-@keyframes pulse {
-    0%, 100% { 
-        opacity: 1;
-        transform: translateY(0);
+    
+    .romantic-text {
+        font-size: 18px;
     }
-    50% { 
-        opacity: 0.8;
-        transform: translateY(-5px);
-    }
-}
-
-/* Make header text more romantic */
-.header h1 {
-    font-size: 3em;
-    color: #d32f2f;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
-
-.header p {
-    font-size: 1.3em;
-    color: #666;
-    line-height: 1.6;
-}
 }
