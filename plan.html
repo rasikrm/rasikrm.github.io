@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Valentine's Plan! 🌹</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="plan-page">
+    <div class="container">
+        <!-- Confetti Celebration -->
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        
+        <div class="celebration">
+            <h1><i class="fas fa-glass-cheers"></i> YAY! You Said YES! <i class="fas fa-glass-cheers"></i></h1>
+            <p class="excited">Get ready for an amazing Valentine's Day! 🎉</p>
+        </div>
+
+        <!-- Plan Details -->
+        <div class="plan-container">
+            <div class="plan-card">
+                <h2><i class="fas fa-calendar-alt"></i> The Valentine's Day Plan</h2>
+                
+                <div class="plan-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-sun"></i> Morning Surprise</h3>
+                        <p>Breakfast in bed with your favorite foods and a special morning treat!</p>
+                    </div>
+                </div>
+
+                <div class="plan-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-heart"></i> Afternoon Adventure</h3>
+                        <p>A surprise activity that you've been wanting to do! (Hint: It involves [your activity here])</p>
+                    </div>
+                </div>
+
+                <div class="plan-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-moon"></i> Romantic Evening</h3>
+                        <p>Dinner at that special place you mentioned, followed by a cozy movie night with all your favorites!</p>
+                    </div>
+                </div>
+
+                <div class="plan-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-star"></i> The Best Part</h3>
+                        <p>Getting to spend the entire day with you, creating more beautiful memories together!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memories Gallery (Same pictures) -->
+            <h2 class="gallery-title"><i class="fas fa-images"></i> A Preview of More Memories to Come...</h2>
+            <div class="gallery">
+                <!-- Same images as first page -->
+                <div class="photo"><img src="images/photo1.jpg" alt="Our memory 1"></div>
+                <div class="photo"><img src="images/photo2.jpg" alt="Our memory 2"></div>
+                <div class="photo"><img src="images/photo3.jpg" alt="Our memory 3"></div>
+                <div class="photo"><img src="images/photo4.jpg" alt="Our memory 4"></div>
+                <div class="photo"><img src="images/photo5.jpg" alt="Our memory 5"></div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message">
+                <h2><i class="fas fa-heartbeat"></i> Can't wait for Valentine's Day!</h2>
+                <p>No matter what we do, the best part is being with you.</p>
+                <div class="countdown">
+                    <p>Counting down the seconds until February 14th!</p>
+                    <div class="countdown-timer" id="countdown"></div>
+                </div>
+                
+                <a href="index.html" class="btn back-btn">
+                    <i class="fas fa-redo"></i> Look at our memories again
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for countdown -->
+    <script>
+        // Countdown to Valentine's Day
+        function updateCountdown() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            let valentinesDate = new Date(currentYear, 1, 14); // February is month 1
+            
+            // If Valentine's Day has passed this year, use next year
+            if (now > valentinesDate) {
+                valentinesDate = new Date(currentYear + 1, 1, 14);
+            }
+            
+            const diff = valentinesDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').innerHTML = 
+                `<span>${days}d</span> <span>${hours}h</span> <span>${minutes}m</span> <span>${seconds}s</span>`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
