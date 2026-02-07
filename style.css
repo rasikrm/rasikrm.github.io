@@ -226,6 +226,38 @@ body {
 /* Page 2 Styles */
 .plan-page {
     background: linear-gradient(135deg, #667eea, #764ba2);
+
+    .photo-collage-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -1;
+}
+
+.collage-photo {
+    flex: 1 0 25%; /* Each takes 25% width, can grow/shrink */
+    height: 33.33vh; /* 1/3 of viewport height */
+    overflow: hidden;
+    position: relative;
+}
+
+.collage-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.3) brightness(0.6);
+    transition: all 0.3s ease;
+}
+
+/* Add overlay to make text readable */
+.plan-page .container {
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.9);
+}
 }
 
 .celebration {
