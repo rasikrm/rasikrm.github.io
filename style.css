@@ -226,16 +226,6 @@ body {
 /* Page 2 Styles */
 .plan-page {
     background: linear-gradient(135deg, #667eea, #764ba2);
-
-    .photo-collage-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    z-index: -1;
 }
 
 .collage-photo {
