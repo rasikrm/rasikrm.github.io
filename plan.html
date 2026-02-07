@@ -57,18 +57,6 @@
                 </div>
             </div>
 
-            <!-- Memories Gallery (Same pictures) -->
-            <h2 class="gallery-title"><i class="fas fa-images"></i> A Preview of More Memories to Come...</h2>
-            <div class="gallery">
-                <!-- Same images as first page -->
-                <div class="photo"><img src="images/photo1.jpg" alt="Our memory 1"></div>
-                <div class="photo"><img src="images/photo2.jpg" alt="Our memory 2"></div>
-                <div class="photo"><img src="images/photo3.jpg" alt="Our memory 3"></div>
-                <div class="photo"><img src="images/photo4.jpg" alt="Our memory 4"></div>
-                <div class="photo"><img src="images/photo5.jpg" alt="Our memory 5"></div>
-                <div class="photo"><img src="images/photo6.jpg" alt="Our memory 6"></div>
-            </div>
-
             <!-- Final Message -->
             <div class="final-valentine">
                 <p class="big-pink">Happy Valentine's Day, Himangi! 🌹</p>
@@ -79,7 +67,7 @@
         <div class="countdown" style="text-align: center;">
             <h2 style="text-align: center;"><i class="fas fa-heartbeat"></i> xxxxx</h2>
             <p style="text-align: center;">xxxxxx.</p>
-            <p style="text-align: center;">Counting down the seconds until February 14th!</p>
+            <p style="text-align: center;">Counting down the seconds until February 15th!</p>
             <div class="countdown-timer" id="countdown"></div>
         </div>
 
@@ -98,11 +86,11 @@
         function updateCountdown() {
             const now = new Date();
             const currentYear = now.getFullYear();
-            let valentinesDate = new Date(currentYear, 1, 14); // February is month 1
+            let valentinesDate = new Date(currentYear, 1, 15); // February is month 1
             
             // If Valentine's Day has passed this year, use next year
             if (now > valentinesDate) {
-                valentinesDate = new Date(currentYear + 1, 1, 14);
+                valentinesDate = new Date(currentYear + 1, 1, 15);
             }
             
             const diff = valentinesDate - now;
